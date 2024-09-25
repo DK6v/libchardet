@@ -1,0 +1,10 @@
+services:
+  libchardet:
+    container_name: libchardet
+    image: bypass-proxy:latest
+    build:
+      dockerfile: ./docker/Dockerfile
+      context: ..
+    user: "1000:1000"
+    volumes:
+      - ..:/source
